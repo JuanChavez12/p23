@@ -100,8 +100,6 @@ public class FrmInicio extends javax.swing.JFrame {
 
         jLabel3.setText("area");
 
-        jTextField4.setText("jTextField4");
-
         jButton2.setText("calcular");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
