@@ -5,6 +5,8 @@
  */
 package p23;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author 18progb0404
@@ -34,20 +36,27 @@ public class FrmInicio extends javax.swing.JFrame {
         lblrombo = new javax.swing.JLabel();
         lbllado = new javax.swing.JLabel();
         lblareaC = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtlado = new javax.swing.JTextField();
         btncalcularC = new javax.swing.JButton();
-        jTextField2 = new javax.swing.JTextField();
-        lblbase = new javax.swing.JLabel();
+        txtbaseT = new javax.swing.JTextField();
+        lblbaseT = new javax.swing.JLabel();
         lblaltura = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        txtalturaT = new javax.swing.JTextField();
         lblareaT = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        btncalcularT = new javax.swing.JButton();
+        lblradio = new javax.swing.JLabel();
+        lblareaCi = new javax.swing.JLabel();
+        txtradio = new javax.swing.JTextField();
+        btncalcularCi = new javax.swing.JButton();
+        lbldiagonalma = new javax.swing.JLabel();
+        lbldiagonalme = new javax.swing.JLabel();
+        lblareaRo = new javax.swing.JLabel();
+        txtdiagonalma = new javax.swing.JTextField();
+        txtdiagonalme = new javax.swing.JTextField();
+        btncalcularRo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("AREA DE FIGURAS GEOMETRICAS  ");
@@ -70,37 +79,83 @@ public class FrmInicio extends javax.swing.JFrame {
         lblareaC.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lblareaC.setText("area");
 
-        jTextField1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-
-        btncalcularC.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btncalcularC.setText("calcular");
-
-        jTextField2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        txtlado.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtlado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                txtladoActionPerformed(evt);
             }
         });
 
-        lblbase.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lblbase.setText("base");
+        btncalcularC.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btncalcularC.setText("calcular");
+        btncalcularC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncalcularCActionPerformed(evt);
+            }
+        });
+
+        txtbaseT.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtbaseT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtbaseTActionPerformed(evt);
+            }
+        });
+
+        lblbaseT.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblbaseT.setText("base");
 
         lblaltura.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lblaltura.setText("altura");
 
-        jTextField3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtalturaT.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 
         lblareaT.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lblareaT.setText("area");
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton1.setText("calcular");
+        btncalcularT.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btncalcularT.setText("calcular");
+        btncalcularT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncalcularTActionPerformed(evt);
+            }
+        });
 
-        jLabel2.setText("radio");
+        lblradio.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblradio.setText("radio");
 
-        jLabel3.setText("area");
+        lblareaCi.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblareaCi.setText("area");
 
-        jButton2.setText("calcular");
+        txtradio.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+
+        btncalcularCi.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btncalcularCi.setText("calcular");
+        btncalcularCi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncalcularCiActionPerformed(evt);
+            }
+        });
+
+        lbldiagonalma.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbldiagonalma.setText("diagonal mayor");
+
+        lbldiagonalme.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbldiagonalme.setText("diagonal menor");
+
+        lblareaRo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblareaRo.setText("area");
+
+        txtdiagonalma.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+
+        txtdiagonalme.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+
+        btncalcularRo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btncalcularRo.setText("calcular");
+        btncalcularRo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncalcularRoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -121,73 +176,93 @@ public class FrmInicio extends javax.swing.JFrame {
                         .addComponent(lblareaT)
                         .addGap(205, 205, 205))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblbase)
-                                .addGap(68, 68, 68)
-                                .addComponent(lblaltura)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
-                                    .addComponent(btncalcularC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(169, 169, 169))))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(99, 99, 99)
                         .addComponent(lbllado)
                         .addGap(147, 147, 147)
                         .addComponent(lblareaC)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel2)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(33, 33, 33)
-                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(31, 31, 31)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(lblbaseT)
+                                        .addGap(68, 68, 68)
+                                        .addComponent(lblaltura))
+                                    .addComponent(txtlado, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(200, 200, 200)
-                                .addComponent(jLabel3)))
-                        .addContainerGap())))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(lblradio)
+                                            .addComponent(txtbaseT, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(25, 25, 25)
+                                                .addComponent(txtalturaT, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(155, 155, 155)
+                                                .addComponent(lblareaCi))))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(212, 212, 212)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(btncalcularC, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(btncalcularT, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(btncalcularCi, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(lblrombo, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap()
+                        .addComponent(lblrombo, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtdiagonalma, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbldiagonalma))
+                        .addGap(26, 26, 26)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbldiagonalme, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtdiagonalme, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(btncalcularRo, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblareaRo))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(32, 32, 32)
                         .addComponent(lblcirculo, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(165, 165, 165)
-                        .addComponent(jButton2)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(txtradio, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addComponent(jLabel1)))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(76, 76, 76)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lbllado)
-                            .addComponent(lblareaC))
+                            .addComponent(lblareaC)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(jLabel1)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(4, 4, 4)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btncalcularC, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblcuadrado))))
+                            .addComponent(txtlado, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblcuadrado)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(btncalcularC, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(41, 41, 41)
@@ -195,41 +270,110 @@ public class FrmInicio extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(27, 27, 27)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblbase)
+                            .addComponent(lblbaseT)
                             .addComponent(lblaltura)
                             .addComponent(lblareaT))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(29, 29, 29)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(35, 35, 35)
-                                .addComponent(jButton1)))))
+                        .addGap(27, 27, 27)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtbaseT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtalturaT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btncalcularT))))
                 .addGap(38, 38, 38)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblcirculo, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblcirculo, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtradio, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3))
-                        .addGap(30, 30, 30)
+                            .addComponent(lblradio)
+                            .addComponent(lblareaCi))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btncalcularCi)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblrombo, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)
+                        .addGap(33, 33, 33))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton2))))
-                .addGap(28, 28, 28)
-                .addComponent(lblrombo, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)
-                .addContainerGap())
+                            .addComponent(lbldiagonalma, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbldiagonalme, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblareaRo))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtdiagonalma, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtdiagonalme, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btncalcularRo))
+                        .addGap(88, 88, 88))))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void txtbaseTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtbaseTActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_txtbaseTActionPerformed
 
+    private void btncalcularCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncalcularCActionPerformed
+        try {
+            Double lado = Double.parseDouble(txtlado.getText());
+            lblareaC.setText(String.valueOf(Math.pow(lado, 2)));
+            txtlado.setText("");
+        } catch (NumberFormatException ex) {
+            JOptionPane.showMessageDialog(null, "error, debes ingresar un valor");
+            System.out.println(ex.toString());
+
+        }
+
+    }//GEN-LAST:event_btncalcularCActionPerformed
+
+    private void txtladoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtladoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtladoActionPerformed
+
+    private void btncalcularTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncalcularTActionPerformed
+        try{
+            double base = Double.parseDouble(txtbaseT.getText());
+            double altura = Double.parseDouble(txtalturaT.getText());
+            lblareaT.setText(String.valueOf(base * altura / 2)) ;
+            txtbaseT.setText("");
+            txtalturaT.setText("");
+         } catch (NumberFormatException ex) {
+             lblareaT.setText("0");
+             System.out.println(ex.toString());
+         }
+        
+        
+    }//GEN-LAST:event_btncalcularTActionPerformed
+
+    private void btncalcularCiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncalcularCiActionPerformed
+        try{
+        double radio = Double.parseDouble(txtradio.getText());
+          lblareaCi.setText(String.valueOf(3.1416 *Math.pow(radio,2) )) ;
+            txtradio.setText("");
+        }catch (NumberFormatException ex){
+            JOptionPane.showMessageDialog(null, "Error debes ingresar un valor:");
+            System.out.println(ex.toString());
+        }
+        
+    }//GEN-LAST:event_btncalcularCiActionPerformed
+
+    private void btncalcularRoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncalcularRoActionPerformed
+        try{
+        double diagonalma = Double.parseDouble(txtdiagonalma.getText());
+        double diagonalme = Double.parseDouble(txtdiagonalme.getText());
+        lblareaRo.setText(String.valueOf(diagonalma *diagonalme /2 )) ;
+        txtdiagonalma.setText("");
+        txtdiagonalme.setText("");
+        
+         } catch (NumberFormatException ex){
+    JOptionPane.showMessageDialog(null, "Error debes ingresar un valor:");
+            System.out.println(ex.toString());
+          }
+            
+    }//GEN-LAST:event_btncalcularRoActionPerformed
+ 
     /**
      * @param args the command line arguments
      */
@@ -267,23 +411,29 @@ public class FrmInicio extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btncalcularC;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btncalcularCi;
+    private javax.swing.JButton btncalcularRo;
+    private javax.swing.JButton btncalcularT;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JLabel lblaltura;
     private javax.swing.JLabel lblareaC;
+    private javax.swing.JLabel lblareaCi;
+    private javax.swing.JLabel lblareaRo;
     private javax.swing.JLabel lblareaT;
-    private javax.swing.JLabel lblbase;
+    private javax.swing.JLabel lblbaseT;
     private javax.swing.JLabel lblcirculo;
     private javax.swing.JLabel lblcuadrado;
+    private javax.swing.JLabel lbldiagonalma;
+    private javax.swing.JLabel lbldiagonalme;
     private javax.swing.JLabel lbllado;
+    private javax.swing.JLabel lblradio;
     private javax.swing.JLabel lblrombo;
     private javax.swing.JLabel lbltriangulo;
+    private javax.swing.JTextField txtalturaT;
+    private javax.swing.JTextField txtbaseT;
+    private javax.swing.JTextField txtdiagonalma;
+    private javax.swing.JTextField txtdiagonalme;
+    private javax.swing.JTextField txtlado;
+    private javax.swing.JTextField txtradio;
     // End of variables declaration//GEN-END:variables
 }
